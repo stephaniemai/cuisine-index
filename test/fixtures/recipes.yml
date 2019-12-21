@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  origin: MyString
+  category: MyString
+  cooked: false
+  note: 1
+  comment: MyText
+
+two:
+  name: MyString
+  origin: MyString
+  category: MyString
+  cooked: false
+  note: 1
+  comment: MyText
