@@ -1,0 +1,11 @@
+<h2><%= @recipe.name %></h2>
+<p><%= @recipe.origin %></p>
+<p><%= @recipe.category %></p>
+<p>Cuisiné: <%=@recipe.cooked %></p>
+<p>Note: <%=@recipe.note %></p>
+<p>Commentaires: <%=@recipe.comment %></p>
+<%= link_to "Edit", edit_recipe_path(@recipe),
+      method: :edit %>
+<%= link_to "Delete", recipe_path(@recipe),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>

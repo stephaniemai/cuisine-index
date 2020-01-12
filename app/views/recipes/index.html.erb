@@ -1,0 +1,26 @@
+<div class="row">
+  <h1>Les recettes de Cath</h1>
+</div>
+<div class="row">
+  <%= link_to "Ajouter une recette", new_recipe_path, class: "btn btn-primary" %>
+</div>
+<div class="row">
+  <input class="form-control form-control-lg" type="text" placeholder="Rechercher une recette">
+</div>
+<% @recipes.each do |recipe| %>
+  <div class="row recipe">
+    <div class="recipe-title"><h2><%= link_to recipe.name, recipe_path(recipe) %></h2></div>
+    <div class="recipe-info">
+      <p>Source : <%= recipe.origin %>, Catégorie : <%= recipe.category %>
+      <% if recipe.cooked %>
+        , Testé et noté <%= recipe.note %>/3
+      <% end %>
+      </p>
+    </div>
+    <div class="recipe-actions">
+      <%= link_to "Supprimer", recipe_path(recipe),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+<% end %>
